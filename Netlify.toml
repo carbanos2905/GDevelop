@@ -1,0 +1,14 @@
+[build]
+  # La commande pour compiler votre projet (ex: npm run build, yarn build)
+  command = "npm run build"
+  
+  # Le dossier généré après le build que Netlify doit publier
+  # (Souvent "dist" pour Vite/Astro, "build" pour Create React App, ".next" pour Next)
+  publish = "dist"
+
+# Règle indispensable pour les routeurs (React Router, Vue Router) 
+# Elle redirige toutes les requêtes vers l'index.html pour éviter les erreurs 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
